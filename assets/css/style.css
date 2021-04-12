@@ -1,1 +1,44 @@
 /*---------------------- LANDING PAGE ---------------------*/
+.landing-page {
+    background: url(/assets/images/plane-sky.jpg) fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: bottom right;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+}
+
+.landing-paragraph {
+    margin: 5px;
+    padding: 10px;
+    color: white;
+    position: relative;
+    left: 20%;
+    top: 18%
+}
+
+.landing-button {
+    width: 100%;
+    background-color: #ffffff36;
+    color: #fff;
+    margin-top: 2rem;
+    height: 45px;
+}
+
+.landing-search {
+    width: 65%;
+    display: inline-block;
+    margin-top: 2rem;
+    height: 40px;
+}
+
+.form-group {
+    width: 90%;
+}
+
+.landing-icon {
+    background-color: #ffffff00;
+    border: none;
+}
