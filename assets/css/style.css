@@ -50,7 +50,7 @@
 .brief-title {
     font-family: 'Lato', sans-serif;
     padding: 5px;
-    margin-top: 10px;
+    margin-top: 12px;
     text-align: center;
 }
 
@@ -58,14 +58,23 @@
     font-family: 'Lato', sans-serif;
     padding: 5px;
     margin-top: 15px;
+    color: #19308C;
 }
 
 .brief-howto {
     font-family: 'Lato', sans-serif;
-    text-align: end;
-    align-items: center;
-    padding-right: 7%;
-    padding-top: 1%;
     margin-top: 15px;
     text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    padding-top: 25px;
+    font-size: 17px;
+    font-weight: 300;
+    color: #69ACE0;
+    position: absolute;
+}
+
+.brief-link {
+    text-decoration: none;
+    color: #00A3FF;
 }
