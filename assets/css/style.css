@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;200;300;400;500;600;700;800&display=swap');
+
 /*---------------------- LANDING PAGE ---------------------*/
 .landing-page {
     background: url(/assets/images/plane-sky.jpg) fixed;
@@ -8,6 +10,7 @@
     height: 100vh;
     display: flex;
     overflow: hidden;
+    font-family: 'Lato', sans-serif;
 }
 
 .landing-paragraph {
@@ -20,7 +23,7 @@
 }
 
 .landing-button {
-    width: 100%;
+    width: 85%;
     background-color: #ffffff36;
     color: #fff;
     margin-top: 2rem;
@@ -28,14 +31,14 @@
 }
 
 .landing-search {
-    width: 65%;
+    width: 85%;
     display: inline-block;
     margin-top: 2rem;
     height: 40px;
 }
 
 .form-group {
-    width: 90%;
+    width: 100%;
 }
 
 .landing-icon {
