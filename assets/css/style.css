@@ -45,3 +45,27 @@
     background-color: #ffffff00;
     border: none;
 }
+
+/*---------------------- BRIEFING PAGE ---------------------*/
+.brief-title {
+    font-family: 'Lato', sans-serif;
+    padding: 5px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.brief-search {
+    font-family: 'Lato', sans-serif;
+    padding: 5px;
+    margin-top: 15px;
+}
+
+.brief-howto {
+    font-family: 'Lato', sans-serif;
+    text-align: end;
+    align-items: center;
+    padding-right: 7%;
+    padding-top: 1%;
+    margin-top: 15px;
+    text-transform: uppercase;
+}
