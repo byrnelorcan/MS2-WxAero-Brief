@@ -128,9 +128,18 @@
     width: auto;
 }
 
+.email-row {
+    justify-content: center;
+}
+
 .email-button {
-    border: 1px solid blue;
-    color: blueviolet;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    border: 1px solid #00A3FF;
+    color: #00A3FF;
+    background-color: #00a2ff3f;
+    width: 100%;
 }
 
 /*------------------ MEDIA BREAKPOINTS------------------*/
