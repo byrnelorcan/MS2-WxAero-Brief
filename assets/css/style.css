@@ -117,6 +117,17 @@
     width: auto;
 }
 
+.taf-title {
+    font-weight: 500;
+    color: #FEA801;
+    font-size: 17px;
+}
+
+.taf-content {
+    font-weight: 300;
+    width: auto;
+}
+
 /*------------------ MEDIA BREAKPOINTS------------------*/
 @media screen and (max-width: 992px) {
     .brief-container {
