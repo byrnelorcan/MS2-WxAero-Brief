@@ -87,10 +87,12 @@
 }
 
 .airport-row {
+    font-family: 'Lato', sans-serif;
     margin: 15px;
 }
 
 .brief-row {
+    font-family: 'Lato', sans-serif;
     justify-content: center;
 }
 
@@ -99,4 +101,25 @@
     width: 30%;
     border: 1px solid black;
     border-radius: 5px;
+}
+
+
+.metar-container {
+    padding: 5px;
+}
+
+.metar-title {
+    font-weight: 500;
+}
+
+.metar-content {
+    font-weight: 300;
+    width: auto;
+}
+
+/*------------------ MEDIA BREAKPOINTS------------------*/
+@media screen and (max-width: 992px) {
+    .brief-container {
+        width: 90%;
+    }
 }
