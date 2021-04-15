@@ -34,6 +34,26 @@ $(function () {
                     $('#visibility_meters').text(metar.visibility.meters_float);
                 }
 
+                if (metar.wind) {
+                    $('#wind_direction').text(metar.wind.degrees.toString().padStart(3, '0'));
+                    $('#wind_speed').text(metar.wind.speed_kts);
+                }
+
+                if (metar.clouds[0]) {
+                    metar.clouds.forEach(cloud => {
+                        if (cloud.code === 'CAVOK') {
+                            $("#cloud_list").append('<li>' + cloud.text);
+                        } else {
+                            $("#cloud_list").append('<li>' + cloud.text + ' clouds at ' + cloud.base_feet_agl + "' AGL ");
+                        }
+                    });
+                    $('#cloud_block').removeClass('d-none');
+                }
+
+                if (metar.barometer) {
+                    $('#pressure').text(metar.barometer.hpa);
+                }
+
             }
         }
     });
