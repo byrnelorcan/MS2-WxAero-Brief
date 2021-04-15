@@ -52,9 +52,28 @@ $(function () {
 
                 if (metar.barometer) {
                     $('#pressure').text(metar.barometer.hpa);
+                    $('#barometer_block').removeClass('d-none');
                 }
 
+                if (metar.temperature) {
+                    $('#temperature_c').text(metar.temperature.celsius);
+                    $('#temperature_block').removeClass('d-none');
+                }
+
+                if (metar.dewpoint) {
+                    $('#dewpoint_c').text(metar.dewpoint.celsius);
+                    $('#dewpoint_block').removeClass('d-none');
+                }
+
+                if (metar.humidity) {
+                    $('#humidity').text(metar.humidity.percent);
+                    $('#humidity_block').removeClass('d-none');
+                }
+
+            } else {
+                $('#icao').text('No results for this search.. Check your ICAO code');
             }
+            $('results_block').removeClass('d-none');
         }
     });
-})
+});
