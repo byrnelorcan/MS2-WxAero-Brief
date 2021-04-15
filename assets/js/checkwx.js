@@ -162,8 +162,61 @@ $(function () {
                             $('#cond_list_2').append(cond.text);
                         })
                     }
+                    //----------------------------------------------------- Third TAF FORECAST -----------------------------------------------------
+                    var result3 = taf.forecast[2];
+
+                    if (result3.wind) {
+                        // add in if less than 5 kts it is variable
+                        $('#wind_direction_3').text(result3.wind.degrees);
+                        $('#wind_speed_3').text(result3.wind.speed_kts);
+                    }
+                    if (result3.visibility) {
+                        $('#visibility_3').text(result3.visibility.meters_float);
+                    }
+                    if (result3.clouds[2]) {
+                        result3.clouds.forEach(cloud => {
+                            if (cloud.code === 'NSC') {
+                                $('#cloud_list_3').append(cloud.text);
+                            } else {
+                                $('#cloud_list_3').append(cloud.text + cloud.base_feet_agl);
+                            }
+                        });
+                    }
+                    if (result3.conditions[2]) {
+                        $('#cond_block_3').removeClass('d-none');
+                        result3.conditions.forEach(cond => {
+                            $('#cond_list_3').append(cond.text);
+                        })
+                    }
 
 
+
+                    //----------------------------------------------------- Fourth TAF FORECAST -----------------------------------------------------
+                    var result4 = taf.forecast[3];
+
+                    if (result4.wind) {
+                        // add in if less than 5 kts it is variable
+                        $('#wind_direction_4').text(result4.wind.degrees);
+                        $('#wind_speed_4').text(result4.wind.speed_kts);
+                    }
+                    if (result4.visibility) {
+                        $('#visibility_4').text(result4.visibility.meters_float);
+                    }
+                    if (result4.clouds[3]) {
+                        result4.clouds.forEach(cloud => {
+                            if (cloud.code === 'NSC') {
+                                $('#cloud_list_4').append(cloud.text);
+                            } else {
+                                $('#cloud_list_4').append(cloud.text + cloud.base_feet_agl);
+                            }
+                        });
+                    }
+                    if (result4.conditions[3]) {
+                        $('#cond_block_4').removeClass('d-none');
+                        result4.conditions.forEach(cond => {
+                            $('#cond_list_4').append(cond.text);
+                        })
+                    }
                 }
 
 
