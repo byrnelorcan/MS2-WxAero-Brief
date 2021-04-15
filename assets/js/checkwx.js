@@ -42,7 +42,7 @@ $(function () {
                 if (metar.clouds[0]) {
                     metar.clouds.forEach(cloud => {
                         if (cloud.code === 'CAVOK') {
-                            $("#cloud_list").append('<li>' + cloud.text);
+                            $("#cloud_list").append('Cloud and visibility are OK');
                         } else {
                             $("#cloud_list").append('<li>' + cloud.text + ' clouds at ' + cloud.base_feet_agl + "' AGL ");
                         }
