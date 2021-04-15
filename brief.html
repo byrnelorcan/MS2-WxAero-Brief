@@ -26,8 +26,8 @@
                 </div>
                 <div class="col-4 brief-search">
                     <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Enter Airport ICAO Code"
-                            aria-label="Search">
+                        <input class="form-control me-2" type="search" id="icao" name="icao"
+                            placeholder="Enter Airport ICAO Code" aria-label="Search">
                         <button class="btn" type="submit"><i class="fas fa-search fa-lg"></i></button>
                     </form>
                 </div>
@@ -42,7 +42,7 @@
             <div class="row airport-row">
                 <div class="col-12 brief-header">
                     <div class="col">
-                        <h3>Airport</h3>
+                        <h3><span id="icao"></span>,<span id="name"></span></h3>
                     </div>
                     <div class="col">
                         <p>LT:</p>
@@ -65,7 +65,7 @@
                             <h4>METAR</h4>
                         </div>
                         <div class="col-6">
-                            <span class="badge bg-secondary">VFR</span>
+                            <span class="badge bg-secondary" id="flight_category">VFR</span>
                         </div>
                     </div>
                     <!--The METAR Content in here-->
@@ -89,8 +89,7 @@
                         <div class="col-6 metar-title">
                             Visibility:
                         </div>
-                        <div class="col-4 metar-content">
-                            The weather content.
+                        <div class="col-4 metar-content" id="visibility_meters">
 
                         </div>
                     </div>
@@ -206,12 +205,14 @@
     </section>
 </body>
 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"
     integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous">
 </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"
     integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous">
 </script>
+<script src="assets/js/checkwx.js"></script>
 <!--POPOVER FONT MOVE TO JS folder!!-->
 <script>
     var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
