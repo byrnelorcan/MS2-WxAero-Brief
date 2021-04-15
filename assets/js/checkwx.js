@@ -108,13 +108,66 @@ $(function () {
                     var forecast5 = taf.forecast[4];
                     $('#timestamp_5').html(forecast5.change.indicator.text + ' from ' + forecast5.timestamp.from + ' to ' + forecast5.timestamp.to);
                 }
-                //taf.forecast.forEach(forecast => {
-                //    $('#timestamp_1').append('Forecast from' + forecast.timestamp.from + 'to' + forecast.timestamp.to);
-                //})
-                //}
-                //if (taf.forecast[0]) {
-                //    $('#timestamp_1').text(forecast.timestamp.from);
-                //}
+
+                if (taf.forecast) {
+                    //----------------------------------------------------- First TAF FORECAST -----------------------------------------------------
+                    var result1 = taf.forecast[0];
+
+                    if (result1.wind) {
+                        // add in if less than 5 kts it is variable
+                        $('#wind_direction_1').text(result1.wind.degrees);
+                        $('#wind_speed_1').text(result1.wind.speed_kts);
+                    }
+                    if (result1.visibility) {
+                        $('#visibility_1').text(result1.visibility.meters_float);
+                    }
+                    if (result1.clouds[0]) {
+                        result1.clouds.forEach(cloud => {
+                            if (cloud.code === 'NSC') {
+                                $('#cloud_list_1').append(cloud.text);
+                            } else {
+                                $('#cloud_list_1').append(cloud.text + cloud.base_feet_agl);
+                            }
+                        });
+                    }
+                    if (result1.conditions[0]) {
+                        $('#cond_block_1').removeClass('d-none');
+                        result1.conditions.forEach(cond => {
+                            $('#cond_list_1').append(cond.text);
+                        })
+                    }
+                    //----------------------------------------------------- Second TAF FORECAST -----------------------------------------------------
+                    var result2 = taf.forecast[1];
+
+                    if (result2.wind) {
+                        // add in if less than 5 kts it is variable
+                        $('#wind_direction_2').text(result2.wind.degrees);
+                        $('#wind_speed_2').text(result2.wind.speed_kts);
+                    }
+                    if (result2.visibility) {
+                        $('#visibility_2').text(result2.visibility.meters_float);
+                    }
+                    if (result2.clouds[1]) {
+                        result2.clouds.forEach(cloud => {
+                            if (cloud.code === 'NSC') {
+                                $('#cloud_list_2').append(cloud.text);
+                            } else {
+                                $('#cloud_list_2').append(cloud.text + cloud.base_feet_agl);
+                            }
+                        });
+                    }
+                    if (result2.conditions[1]) {
+                        $('#cond_block_2').removeClass('d-none');
+                        result2.conditions.forEach(cond => {
+                            $('#cond_list_2').append(cond.text);
+                        })
+                    }
+
+
+                }
+
+
+                //$('#taf_1').html(forecast1.wind.degrees + ' at ' + weather1.wind.speed_kts + '.' + ' Visibility ' + weather1.visibility.meters_float);
 
             }
         }
