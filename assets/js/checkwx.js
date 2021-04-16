@@ -95,23 +95,40 @@ $(function () {
         success: function (response) {
             if (response.results > 0) {
                 var taf = response.data[0];
+                var bulletin_info = taf.timestamp.bulletin;
+                var date = new Date(bulletin_info);
+                var from_timestamp = taf.timestamp.from;
+                var from = new Date(from_timestamp);
+                var to_timestamp = taf.timestamp.to;
+                var end = new Date(to_timestamp);
 
-                if (taf.forecast) {
-                    var forecast1 = taf.forecast[0];
-                    $('#timestamp_1').html('Forecast from ' + forecast1.timestamp.from + ' to ' + forecast1.timestamp.to);
-                    var forecast2 = taf.forecast[1];
-                    $('#timestamp_2').html(forecast2.change.indicator.text + ' from ' + forecast2.timestamp.from + ' to ' + forecast2.timestamp.to);
-                    var forecast3 = taf.forecast[2];
-                    $('#timestamp_3').html(forecast3.change.indicator.text + ' from ' + forecast3.timestamp.from + ' to ' + forecast3.timestamp.to);
-                    var forecast4 = taf.forecast[3];
-                    $('#timestamp_4').html(forecast4.change.indicator.text + ' from ' + forecast4.timestamp.from + ' to ' + forecast4.timestamp.to);
-                    var forecast5 = taf.forecast[4];
-                    $('#timestamp_5').html(forecast5.change.indicator.text + ' from ' + forecast5.timestamp.from + ' to ' + forecast5.timestamp.to);
-                }
+                $('#taf_bulletin').html('Bulletin issued on ' + date.toUTCString());
+                $('#taf_raw').text(taf.raw_text);
+                $('#taf_info').html('Report issued for ' + taf.icao + ' at ' + taf.station.name);
+                $('#taf_timestamp').html('Forecast active from ' + from.toUTCString() + ' to ' + end.toUTCString());
 
-                if (taf.forecast) {
+
+                /* if (taf.forecast) {
+                //     var forecast1 = taf.forecast[0];
+                //    $('#timestamp_1').html('Forecast from ' + forecast1.timestamp.from + ' to ' + forecast1.timestamp.to);
+                //    $('#timestamp_1_block').removeClass('d-none');
+                //     var forecast2 = taf.forecast[1];
+                //     $('#timestamp_2').html(forecast2.change.indicator.text + ' from ' + forecast2.timestamp.from + ' to ' + forecast2.timestamp.to);
+                //     $('#timestamp_2_block').removeClass('d-none');
+                //     var forecast3 = taf.forecast[2];
+                //     $('#timestamp_3').html(forecast3.change.indicator.text + ' from ' + forecast3.timestamp.from + ' to ' + forecast3.timestamp.to);
+                //    $('#timestamp_3_block').removeClass('d-none');
+                //     var forecast4 = taf.forecast[3];
+                //     $('#timestamp_4').html(forecast4.change.indicator.text + ' from ' + forecast4.timestamp.from + ' to ' + forecast4.timestamp.to);
+                //    $('#timestamp_4_block').removeClass('d-none');
+                //     var forecast5 = taf.forecast[4];
+                //     $('#timestamp_5').html(forecast5.change.indicator.text + ' from ' + forecast5.timestamp.from + ' to ' + forecast5.timestamp.to);
+                //     $('#timestamp_5_block').removeClass('d-none');
+                //}
+
+                //if (taf.forecast) {
                     //----------------------------------------------------- First TAF FORECAST -----------------------------------------------------
-                    var result1 = taf.forecast[0];
+                 //   var result1 = taf.forecast[0];
 
                     if (result1.wind) {
                         // add in if less than 5 kts it is variable
@@ -147,7 +164,7 @@ $(function () {
                     if (result2.visibility) {
                         $('#visibility_2').text(result2.visibility.meters_float);
                     }
-                    if (result2.clouds[1]) {
+                    if (result2.clouds[0]) {
                         result2.clouds.forEach(cloud => {
                             if (cloud.code === 'NSC') {
                                 $('#cloud_list_2').append(cloud.text);
@@ -156,7 +173,7 @@ $(function () {
                             }
                         });
                     }
-                    if (result2.conditions[1]) {
+                    if (result2.conditions[0]) {
                         $('#cond_block_2').removeClass('d-none');
                         result2.conditions.forEach(cond => {
                             $('#cond_list_2').append(cond.text);
@@ -173,7 +190,7 @@ $(function () {
                     if (result3.visibility) {
                         $('#visibility_3').text(result3.visibility.meters_float);
                     }
-                    if (result3.clouds[2]) {
+                    if (result3.clouds[0]) {
                         result3.clouds.forEach(cloud => {
                             if (cloud.code === 'NSC') {
                                 $('#cloud_list_3').append(cloud.text);
@@ -182,7 +199,7 @@ $(function () {
                             }
                         });
                     }
-                    if (result3.conditions[2]) {
+                    if (result3.conditions[0]) {
                         $('#cond_block_3').removeClass('d-none');
                         result3.conditions.forEach(cond => {
                             $('#cond_list_3').append(cond.text);
@@ -202,7 +219,7 @@ $(function () {
                     if (result4.visibility) {
                         $('#visibility_4').text(result4.visibility.meters_float);
                     }
-                    if (result4.clouds[3]) {
+                    if (result4.clouds[0]) {
                         result4.clouds.forEach(cloud => {
                             if (cloud.code === 'NSC') {
                                 $('#cloud_list_4').append(cloud.text);
@@ -211,13 +228,13 @@ $(function () {
                             }
                         });
                     }
-                    if (result4.conditions[3]) {
+                    if (result4.conditions[0]) {
                         $('#cond_block_4').removeClass('d-none');
                         result4.conditions.forEach(cond => {
                             $('#cond_list_4').append(cond.text);
                         })
                     }
-                }
+                } */
 
 
                 //$('#taf_1').html(forecast1.wind.degrees + ' at ' + weather1.wind.speed_kts + '.' + ' Visibility ' + weather1.visibility.meters_float);
