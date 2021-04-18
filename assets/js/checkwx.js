@@ -155,10 +155,47 @@ $(function () {
         success: function (response) {
             if (response.results > 0) {
                 var time = response.data[0];
-
+                //var lat = response.data[0].location.coordinates[1];
+                //var long = response.data[0].location.coordinates[0];
                 $('#local_time').text(time.timestamp.local.time);
                 $('#utc_time').text(time.timestamp.utc.time);
+                $('#loc').html(time.location.coordinates[0] + ',' + time.location.coordinates[1]);
+
             }
         }
+
+
     });
+
 });
+
+/*----------------------------- MAP DATA -----------------------------------*/
+
+
+function initMap() {
+    //https://stackoverflow.com/questions/58012240/map-center-and-marker-create-based-on-text-input
+    var loc = document.getElementById('loc').value;
+    var coords = loc.split(",");
+    var build = new google.maps.LatLng(parseFloat(coords[0]), parseFloat(coords[1]));
+    var map = new google.maps.Map(document.getElementById('map'), {
+        center: build,
+        zoom: 13,
+        mapTypeId: 'roadmap'
+    });
+}
+
+
+
+
+
+//var lat = document.getElementById('lat');
+//var long = document.getElementById('long');
+//var build = new google.maps.LatLng(parseFloat(lat), parseFloat(long));
+//var map = new google.maps.Map(document.getElementById('map'), {
+//center: build,
+// zoom: 13,
+//mapTypeId: 'roadmap'
+//});
+//var marker = new google.maps.Marker({
+// map: map,
+// position: map.getCenter()

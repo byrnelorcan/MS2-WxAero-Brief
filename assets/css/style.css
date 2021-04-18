@@ -141,6 +141,12 @@
     width: 100%;
 }
 
+/*------------------ MAP------------------*/
+#map {
+    height: 300px;
+    width: 90%;
+}
+
 /*------------------ MEDIA BREAKPOINTS------------------*/
 @media screen and (max-width: 992px) {
     .brief-container {
