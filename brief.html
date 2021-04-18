@@ -84,12 +84,12 @@
 
             <div class="row brief-row">
                 <div class="col-12 col-xl-3 brief-container">
-                    <div class="row">
+                    <div class="row margin-headers">
                         <div class="col-6">
                             <h4>METAR</h4>
                         </div>
                         <div class="col-6">
-                            <span class="badge bg-secondary" id="flight_category">VFR</span>
+                            <span class="badge" id="flight_category"></span>
                         </div>
                     </div>
                     <!--The METAR Content in here-->
@@ -143,22 +143,22 @@
                             <span id="humidity"></span>%
                         </div>
                     </div>
-                    <div class="row metar-container">
+                    <div class="row metar-container d-none" id="cond_block">
                         <div class="col-6 metar-title">
-                            Trend:
+                            Conditions:
                         </div>
                         <div class="col-4 metar-content">
-                            The weather content.
+                            <span id="cond_list"></span>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-xl-3 brief-container">
-                    <div class="row">
+                    <div class="row margin-headers">
                         <div class="col-6">
                             <h4>TAF</h4>
                         </div>
                         <div class="col-6">
-                            <span class="badge bg-secondary">Active</span>
+                            <span class="badge" id="taf_label"></span>
                         </div>
                     </div>
                     <div class="row">
@@ -176,7 +176,7 @@
 
                 </div>
                 <div class="col-12 col-xl-3 brief-container">
-                    <div class="row">
+                    <div class="row margin-headers">
                         <div class="col-12">
                             <h4>Location:</h4>
                         </div>
@@ -262,7 +262,6 @@
             <div class="col-5">
                 <button type="button" class="btn btn-primary email-button">Print my brief!</button>
             </div>
-        </div>
         </div>
     </section>
 
