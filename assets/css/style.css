@@ -147,6 +147,11 @@
     width: 90%;
 }
 
+.location-row {
+    justify-content: center;
+
+}
+
 /*------------------ MEDIA BREAKPOINTS------------------*/
 @media screen and (max-width: 992px) {
     .brief-container {
