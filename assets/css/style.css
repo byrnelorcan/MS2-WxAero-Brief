@@ -74,6 +74,11 @@
 
 }
 
+.margin-headers {
+    margin-top: 12px;
+    margin-bottom: 9px;
+}
+
 .fa-sun {
     color: rgb(240, 144, 0);
 }
@@ -93,7 +98,7 @@
 
 .brief-header {
 
-    border: 1px solid black;
+    border: 1.5px solid #adb5bd;
     border-radius: 5px;
     padding: 0.8rem;
     width: 95%;
@@ -110,7 +115,7 @@
 .brief-container {
     margin: 20px;
     width: 30%;
-    border: 1px solid black;
+    border: 1.5px solid #adb5bd;
     border-radius: 5px;
 }
 
@@ -153,6 +158,58 @@
     width: 100%;
 }
 
+
+/*------------------ FLIGHT CATEGORY ------------------*/
+.vfr_label {
+    background-color: palegreen;
+    font-weight: 500;
+    width: 75%;
+    font-size: large;
+}
+
+.ifr_label {
+    background-color: red;
+    font-weight: 500;
+    width: 75%;
+    font-size: large;
+}
+
+.lifr_label {
+    background-color: rgb(255, 182, 243);
+    font-weight: 500;
+    width: 75%;
+    font-size: large;
+}
+
+.mvfr_label {
+    background-color: rgb(2, 5, 199);
+    font-weight: 500;
+    width: 75%;
+    font-size: large;
+}
+
+.unk_label {
+    background-color: rgb(0, 0, 2);
+    font-weight: 500;
+    width: 75%;
+    font-size: large;
+}
+
+.taf-active {
+    background-color: rgb(70, 74, 90);
+    font-weight: 500;
+    width: 75%;
+    font-size: large;
+}
+
+.taf-inactive {
+    background-color: rgba(219, 219, 219, 0.801);
+    color: red;
+    width: 75%;
+    font-size: large;
+    font-weight: 500;
+}
+
 /*------------------ MAP------------------*/
 #map {
     height: 300px;
@@ -165,6 +222,12 @@
 }
 
 /*------------------ MEDIA BREAKPOINTS------------------*/
+@media screen and (max-width: 1200px) {
+    .brief-container {
+        margin: 15px;
+    }
+}
+
 @media screen and (max-width: 992px) {
     .brief-container {
         width: 90%;
@@ -189,8 +252,38 @@
 
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 576px) {
     .brief-header {
         font-size: smaller;
+    }
+
+    .vfr_label {
+        width: 100%;
+    }
+
+    .ifr_label {
+        width: 100%;
+    }
+
+    .lifr_label {
+        width: 100%;
+    }
+
+    .mvfr_label {
+        width: 100%;
+
+    }
+
+    .unk_label {
+        width: 100%;
+
+    }
+
+    .taf-active {
+        width: 100%;
+    }
+
+    .taf-inactive {
+        width: 100%;
     }
 }
