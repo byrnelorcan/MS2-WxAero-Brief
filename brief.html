@@ -30,19 +30,25 @@
         <!------------------------------HEADERS AND SEARCH BAR------------------------------>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-4 brief-title">
+                <div class="col-md-4 col-6 brief-title">
                     <a href="index.html" target="_blank" class="brief-link">
                         <h2>Wx AeroBrief</h2>
                     </a>
                 </div>
-                <div class="col-4 brief-search">
+                <div class="col-6 d-md-none text-center">
+                    <button type="button" class="brief-howto btn" data-bs-toggle="popover" title="ICAO Code"
+                        data-bs-content="An ICAO code is a four letter code designating aerodromes. For example Dublin is EIDW or New York JFK is KJFK">
+                        <p>How to read?</p>
+                    </button>
+                </div>
+                <div class="col-md-4 col-12 brief-search">
                     <form class="d-flex">
-                        <input class="form-control me-2" type="search" id="icao" name="icao"
+                        <input class="form-control form-text me-2" type="search" id="icao" name="icao"
                             placeholder="Enter Airport ICAO Code" aria-label="Search">
                         <button class="btn" type="submit"><i class="fas fa-search fa-lg"></i></button>
                     </form>
                 </div>
-                <div class="col-4 text-center">
+                <div class="col-4 d-none d-md-block text-center">
                     <button type="button" class="brief-howto btn" data-bs-toggle="popover" title="ICAO Code"
                         data-bs-content="An ICAO code is a four letter code designating aerodromes. For example Dublin is EIDW or New York JFK is KJFK">
                         <p>How to read?</p>
