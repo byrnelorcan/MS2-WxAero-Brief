@@ -10,6 +10,17 @@
     <link rel="stylesheet" href="assets/css/style.css" type="text/css">
     <script src="https://kit.fontawesome.com/4867e68bbe.js" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/4867e68bbe.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("user_XEJI4PEvfunEqy0iycSnQ ");
+            emailjs.send('gmail', 'Briefing', {
+                name: "James",
+                notes: "Check this out!"
+            });
+        })();
+    </script>
     <title>WxAero Brief</title>
 </head>
 

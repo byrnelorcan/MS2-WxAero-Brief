@@ -176,6 +176,7 @@ function initMap() {
     //https://stackoverflow.com/questions/58012240/map-center-and-marker-create-based-on-text-input
     var loc = document.getElementById('loc').value;
     var coords = loc.split(",");
+    //https://stackoverflow.com/questions/26890514/convert-lat-long-string-into-google-maps-api-latlng-object
     var build = new google.maps.LatLng(parseFloat(coords[0]), parseFloat(coords[1]));
     var map = new google.maps.Map(document.getElementById('map'), {
         center: build,
