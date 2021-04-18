@@ -174,4 +174,56 @@ $(function () {
         },
 
     });
+
+    $.ajax({
+        type: 'GET',
+        url: 'https://api.checkwx.com/station/' + icao + '/timestamp',
+        headers: {
+            'X-API-Key': '4a6fff29393d4f7080abbdfae4'
+        },
+        dataType: 'json',
+
+        error: function (response) {
+            var e = response.responseJSON;
+            $('#icao').text(e.StatusCode);
+            $('#name').text(e.error);
+            $('#raw').text(e.message);
+        },
+
+        success: function (response) {
+            if (response.results > 0) {
+                var time = response.data[0];
+
+                $('#local_time').text(time.timestamp.local.time);
+                $('#utc_time').text(time.timestamp.utc.time);
+                $('#loc').html(time.location.coordinates[0] + ',' + time.location.coordinates[1]);
+            }
+        },
+    });
+
+    $.ajax({
+        type: 'GET',
+        url: 'https://api.checkwx.com/station/' + icao,
+        headers: {
+            'X-API-Key': '4a6fff29393d4f7080abbdfae4'
+        },
+        dataType: 'json',
+
+        error: function (response) {
+            var e = response.responseJSON;
+            $('#icao').text(e.StatusCode);
+            $('#name').text(e.error);
+            $('#raw').text(e.message);
+        },
+
+        success: function (response) {
+            if (response.results > 0) {
+                var station = response.data[0];
+
+                $('#type').text(station.type);
+                $('#elevation').text(station.elevation.meters);
+                $('#coordinates').html(station.latitude.degrees + ' / ' + station.longitude.degrees);
+            }
+        },
+    });
 })
