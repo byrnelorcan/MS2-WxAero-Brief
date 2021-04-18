@@ -69,9 +69,21 @@
     padding: 0;
     padding-top: 25px;
     font-size: 17px;
-    font-weight: 300;
+    font-weight: 400;
     color: #69ACE0;
 
+}
+
+.fa-sun {
+    color: rgb(240, 144, 0);
+}
+
+.fa-moon {
+    color: rgb(0, 0, 102);
+}
+
+.form-text {
+    font-weight: 300;
 }
 
 .brief-link {
@@ -160,5 +172,25 @@
 
     .brief-header {
         width: 90%;
+    }
+
+
+}
+
+@media screen and (max-width: 767px) {
+    .brief-search {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .brief-howto {
+        padding-top: 20px;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+    .brief-header {
+        font-size: smaller;
     }
 }
