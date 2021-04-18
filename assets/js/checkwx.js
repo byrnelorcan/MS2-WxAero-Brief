@@ -42,7 +42,7 @@ $(function () {
                 if (metar.clouds[0]) {
                     metar.clouds.forEach(cloud => {
                         if (cloud.code === 'CAVOK') {
-                            $("#cloud_list").append('Cloud and visibility are OK');
+                            $("#cloud_list").append('<li>' + ' Ceiling and visibility are ok' + '</li>');
                         } else {
                             $("#cloud_list").append('<li>' + cloud.text + ' clouds at ' + cloud.base_feet_agl + "' AGL ");
                         }
@@ -70,8 +70,31 @@ $(function () {
                     $('#humidity_block').removeClass('d-none');
                 }
 
+                if (metar.flight_category) {
+                    if (metar.flight_category === 'VFR') {
+                        $('#flight_category').addClass('vfr_label').text('VFR');
+                    } else if (metar.flight_category === 'IFR') {
+                        $('#flight_category').addClass('ifr_label').text('IFR');
+                    } else if (metar.flight_category === 'MVFR') {
+                        $('#flight_category').addClass('mvfr_label').text('MVFR');
+                    } else if (metar.flight_category === 'LIFR') {
+                        $('#flight_category').addClass('lifr_label').text('LIFR');
+                    } else if (metar.flight_category === 'UNK') {
+                        $('#flight_category').addClass('unk_label').text('Unknown');
+                    }
+                }
+
+                if (metar.conditions[0]) {
+                    $('#cond_block').removeClass('d-none');
+                    metar.conditions.forEach(condition => {
+                        $('#cond_list').append('<li>' + condition.text + '</li>');
+                    });
+                }
+
+
+
             } else {
-                $('#icao').text('No results for this search.. Check your ICAO code');
+                $('#name').text('No results for this search.. Check your ICAO code');
             }
             $('results_block').removeClass('d-none');
         }
@@ -94,6 +117,7 @@ $(function () {
 
         success: function (response) {
             if (response.results > 0) {
+                $('#taf_label').addClass('taf-active').text('ACTIVE');
                 var taf = response.data[0];
                 var bulletin_info = taf.timestamp.bulletin;
                 var date = new Date(bulletin_info);
@@ -107,6 +131,8 @@ $(function () {
                 $('#taf_info').html('Report issued for ' + taf.icao + ' at ' + taf.station.name);
                 $('#taf_timestamp').html('Forecast active from ' + from.toUTCString() + ' to ' + end.toUTCString());
 
+            } else {
+                $('#taf_label').addClass('taf-inactive').text('INACTIVE');
             }
         }
     });
