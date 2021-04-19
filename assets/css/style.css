@@ -172,7 +172,7 @@
     justify-content: center;
     margin: 10px;
     padding-top: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 45px;
 }
 
 .email-button {
@@ -189,6 +189,19 @@
     font-family: 'Lato';
     font-weight: 300;
 }
+
+.modal-content {
+    font-family: 'Lato', sans-serif;
+}
+
+.btn-info {
+    background-color: #00a2ff3f;
+}
+
+.btn-email {
+    background-color: #00A3FF;
+}
+
 
 
 /*------------------ FLIGHT CATEGORY ------------------*/
