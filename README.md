@@ -6,11 +6,12 @@
 
 ## **Code Institute Milestone 2 Project - Interactive Frontend Development**
 
-Text
+The project has been undertaken to build an efficient and simple weather briefing website for pilots. The site is named "Wx AeroBrief", where 'WX' is an abbreviation fo weather. The site aims to be a contrast to other aviation weather sites, where the content can be overwhelming and the user-interface outdated.
 
-Text
+The site is broken down into two pages, the landing page and the briefing page. Both pages aim to intice the user to utilise the functions provided and display a professional but approachable user interface. The pages also cater for a user who may not be familiar with aviation terminology and therefore enables the user to learn more. 
 
-Text
+Overall, the websites purpose is present the critical information needed for a weather brief in simple and digestable format.
+
 
 # Table of Contents:
 
@@ -54,12 +55,31 @@ Text
 # **UX**
 ## User Stories
 ----------------
-Text in here
+In this project there are three main groups of target users. They include professional pilots, training students and casual general users. The user stories for each group are defined below.
 
 __Applicable to all users__
+- As a user, I would like to understand the purpose of the website on landing on the page.
+- As a user, I would like to get the information I require quickly and effectively.
+- As a user, I require the information in standard industry format. ie in METAR and TAF.
+- As a user, I need to be able to search for my relevant airfield.
+- As a user, I would like to see additional data such as the location, to gain a greater situational awareness.
+- As a user, the ability to email or print my brief is important.
 
+__Professional Pilots__
+- As a professional pilot, the ability to see the weather forecast is vital to safe operation of my flight.
+- As a professional pilot, additional information about my airfield is important.
+- As a professional pilot, I require information for a specific reporting point and not necessarily for a large region.
+
+__Training and Students__
+- As a student, I would like the ability to learn more about weather reports and standard industry practice.
+- As a student, I am not as proficient in flying and require a set of rules to go flying. Knowing that condtions are safe for me to fly is vital.
+- As a student, simple and disgestable content would be effective in my learning application.
+
+__General user__
+- As a general user, I do not need overwhelming amounts of content or and do not want to research how to read the weather.
 
 __Returning Users__
+- As a returning user, I would like to be able to quickly navigate to the briefing page.
 
 
 ## Strategy
