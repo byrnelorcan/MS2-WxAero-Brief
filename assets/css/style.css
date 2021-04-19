@@ -23,11 +23,20 @@
 }
 
 .landing-button {
-    width: 85%;
+    width: 80%;
     background-color: #ffffff36;
     color: #fff;
     margin-top: 2rem;
     height: 45px;
+    font-family: 'Lato';
+    font-size: large;
+    font-weight: 300;
+}
+
+.landing-text {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 2rem;
 }
 
 .landing-search {
@@ -37,7 +46,7 @@
     height: 40px;
 }
 
-.form-group {
+.landi .form-group {
     width: 100%;
 }
 
@@ -47,6 +56,17 @@
 }
 
 /*---------------------- BRIEFING PAGE ---------------------*/
+.container-padding {
+    padding: 5rem
+}
+
+.wrapper {
+    border: 1.5px solid #adb5bd;
+    border-radius: 5px;
+    padding: 5px;
+    height: 100%;
+}
+
 .brief-title {
     font-family: 'Lato', sans-serif;
     padding: 5px;
@@ -98,10 +118,10 @@
 
 .brief-header {
 
-    border: 1.5px solid #adb5bd;
+    /*border: 1.5px solid #adb5bd;*/
     border-radius: 5px;
     padding: 0.8rem;
-    width: 95%;
+    /*width: 95%;*/
 
     margin: 20px;
 
@@ -117,9 +137,9 @@
 }
 
 .brief-container {
-    margin: 20px;
-    width: 30%;
-    border: 1.5px solid #adb5bd;
+    /*margin: 20px;
+    width: 30%;*/
+    /*border: 1.5px solid #adb5bd;*/
     border-radius: 5px;
 }
 
@@ -249,6 +269,30 @@
         width: 90%;
     }
 
+    .container-padding {
+        padding: 2.5rem;
+    }
+
+    .landing-page {
+        background: url(../images/plane-sky-small.jpg) fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: bottom right;
+        height: 100vh;
+        display: flex;
+        overflow: hidden;
+
+    }
+
+    .landing-button {
+        width: 50%;
+    }
+
+    .landing-paragraph {
+        left: 10%;
+    }
+
 
 }
 
@@ -262,9 +306,33 @@
         padding-top: 20px;
     }
 
+    .container-padding {
+        padding: 1.5rem;
+    }
+
+    .landing-paragraph {
+        left: 0%;
+        top: 10%;
+    }
+
+    .landing-button {
+        width: 50%;
+    }
+
+
+
 }
 
 @media screen and (max-width: 576px) {
+    .landing-button {
+        width: 95%;
+        margin-top: 70%;
+    }
+
+    .container-padding {
+        padding: 1rem;
+    }
+
     .brief-header {
         font-size: smaller;
     }
@@ -298,4 +366,5 @@
     .taf-inactive {
         width: 100%;
     }
+
 }
