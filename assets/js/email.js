@@ -1,3 +1,7 @@
+(function () {
+    emailjs.init('user_XEJI4PEvfunEqy0iycSnQ');
+})();
+
 function sendMail(contactForm) {
     emailjs.send("service_fa9cjf3", "template_3kicv7a", {
             "from_name": contactForm.name.value,
