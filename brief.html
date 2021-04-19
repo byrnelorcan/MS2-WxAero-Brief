@@ -347,17 +347,18 @@
 <script src="assets/js/checkwx.js"></script>
 <script src="assets/js/email.js"></script>
 <script>
+    //https://stackoverflow.com/questions/2231936/how-can-i-pre-fill-the-value-of-a-textarea-in-an-html-form
     function addMetar() {
-        //We first get the current value of the textarea
+
         var x = document.getElementById("emaildata").value;
-        //Then we concatenate the string "content" onto it
+
         document.getElementById("emaildata").value = x + document.getElementById('metar_email').innerHTML;
     }
 
     function addTaf() {
-        //We first get the current value of the textarea
+
         var x = document.getElementById("emaildata").value;
-        //Then we concatenate the string "content" onto it
+
         document.getElementById("emaildata").value = x + document.getElementById('taf_email').innerHTML;
     }
 </script>
