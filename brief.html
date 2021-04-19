@@ -14,12 +14,25 @@
     </script>
     <script type="text/javascript">
         (function () {
-            emailjs.init("user_XEJI4PEvfunEqy0iycSnQ ");
-            emailjs.send('gmail', 'Briefing', {
-                name: "James",
-                notes: "Check this out!"
-            });
+            emailjs.init('user_XEJI4PEvfunEqy0iycSnQ');
         })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function () {
+            document.getElementById('email_brief').addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                this.taf_raw = document.getElementById('taf_raw');
+                this.metar_raw = document.getElementById('metar_raw');
+
+                emailjs.sendForm('from_name', 'from_email', this)
+                    .then(function () {
+                        console.log('SUCCESS!');
+                    }, function (error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
     </script>
     <title>WxAero Brief</title>
 </head>
@@ -136,7 +149,7 @@
             </div>
 
             <div class="row brief-row">
-                <div class="col-12 col-xl-3 brief-container">
+                <div class="col-12 col-xl-3 brief-container" id="printMe">
                     <div class="row margin-headers">
                         <div class="col-6">
                             <h4>METAR</h4>
@@ -205,7 +218,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-xl-3 brief-container">
+                <div class="col-12 col-xl-3 brief-container" id="printMe">
                     <div class="row margin-headers">
                         <div class="col-6">
                             <h4>TAF</h4>
@@ -270,13 +283,12 @@
         <div class="row email-row">
             <div class="col-5">
                 <button type="button" class="btn btn-primary email-button" data-bs-toggle="modal"
-                    data-bs-target="#exampleModal">
+                    data-bs-target="#email_brief">
                     Email my brief!
                 </button>
 
                 <!-- Modal -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
+                <div class="modal fade" id="email_brief" tabindex="-1" aria-labelledby="email_brief" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -287,33 +299,26 @@
                             <div class="modal-body">
                                 <form>
                                     <div class="mb-3">
-                                        <label for="exampleInputEmail1" class="form-label">Email address</label>
-                                        <input type="email" class="form-control" id="exampleInputEmail1"
+                                        <label for="InputEmail" class="form-label">Email address</label>
+                                        <input type="email" class="form-control" id="InputEmail"
                                             aria-describedby="emailHelp">
                                         <div id="emailHelp" class="form-text">We'll never share your email with
                                             anyone else.</div>
                                     </div>
                                     <div class="mb-3">
-                                        <label for="exampleInputPassword1" class="form-label">Password</label>
-                                        <input type="password" class="form-control" id="exampleInputPassword1">
+                                        <label for="InputName" class="form-label">Name</label>
+                                        <input type="name" class="form-control" id="InputName">
                                     </div>
-                                    <div class="mb-3 form-check">
-                                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                                    </div>
-                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                    <input type="submit" class="btn btn-primary"></input>
                                 </form>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Send</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-5">
-                <button type="button" class="btn btn-primary email-button">Print my brief!</button>
+                <button type="button" class="btn btn-primary email-button" onclick="printDiv('printMe')">Print my
+                    brief!</button>
             </div>
         </div>
     </section>
@@ -336,6 +341,20 @@
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDAEssOU7Da63DY0v6cZAx4Rq7G67v3Vr4&callback=initMap"
     type="text/javascript"></script>
 <script src="assets/js/checkwx.js"></script>
+<script src="assets/js/email.js"></script>
+<script>
+    function printDiv(divName) {
+        var printContents = document.getElementById(divName).innerHTML;
+        var originalContents = document.body.innerHTML;
+
+        document.body.innerHTML = printContents;
+
+        window.print();
+
+        document.body.innerHTML = originalContents;
+
+    }
+</script>
 
 <!--<script src="assets/js/map.js"></script>-->
 <!--POPOVER FONT MOVE TO JS folder!!-->
