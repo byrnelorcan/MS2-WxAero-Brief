@@ -86,17 +86,41 @@ __Returning Users__
 ----------------
 __Project goals__
 
+The aim of this project is present aviation weather briefing information in a simple and clear but professional way. It was important to create a user-friendly and approachable site with a modern design and feel. The critical data had to be presented to the user in a way that they are familar with. This in-effect makes the site very accessible to people who understand the industry and the standard operating procedures. 
+
+The content of the site therefore had to include;
+- ICAO designated airfield weather reporting.
+- METAR - Meteorological Terminal Air Report in decoded or coded format.
+- TAF - Terminal Aerodrome Forecast in coded form.
+
+Additionally content that may be of use is;
+- The location by latitude and longitude.
+- An area map.
 
 __User goals__ 
 
+The user goals will be met by enabling the user get access to the required data in a clear and concise format. The users require key data and an efficient user experience. The users goals will be achieved through a basic structure that divides the data into easily disgestable sections and enables the user to gain only they information they require. 
 
+The ensure the user needs are met the site will be a simple landing page and then briefing page in the style of a dashboard of information. 
 
-__Industry Research__
+__Research__
 
+Through prior experience with aviation weather briefing websites and apps, I had an understanding that there is a significant gap in the market for a user-friendly and simple briefing site. Most aviation weather apps are difficult to use, their design is outdated and the key information can be buried in content. Therefore a priority in the design of the site is simplicity and an efficent user-experience. A modern and light design combined with key data for the user makes the site stand out compared to the apps that were researched. 
 
 
 ## Scope 
 ----------------
+Based on the strategy of the project, a number key requirements were laid out. The site is built for purpose and the data should be reliable and accurate as possible. The scope therefore includes:
+- A landing page detailing what parameter will be needed to use the site. ie the ICAO code.
+- A section detailing what an ICAO code is and some examples for users who are not familiar. However, it should be noted that an aviation professional or student would know their relevant ICAO code.
+- A section for a decoded METAR, displaying key wind, clouds, pressure, temperature and conditions.
+- A section for a TAF, showing the relevant forecast window and the coded TAF forecast.
+- An interactive satellite map of the aerodrome.
+- The aerodrome co-ordinates and elevation above sea level.
+- Form for emailing that is fully functional.
+- Print function to enable the user to print directly from browser.
+- A search bar to input any relevant ICAO code.
+- A popover that enables the user to learn more about METARS and TAFS.
 
 
 
