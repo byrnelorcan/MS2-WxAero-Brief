@@ -29,6 +29,7 @@ $(function () {
 
                 $('#icao_code').html(metar.icao);
                 $('#name').text(metar.station.name);
+                $('#metar_raw').text(metar.raw_text);
 
                 if (metar.visibility) {
                     $('#visibility_meters').text(metar.visibility.meters_float);
