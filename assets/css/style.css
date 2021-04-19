@@ -107,6 +107,10 @@
 
 }
 
+.modal-footer {
+    display: block;
+}
+
 .brief-row {
     font-family: 'Lato', sans-serif;
     justify-content: center;

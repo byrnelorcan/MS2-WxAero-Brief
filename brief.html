@@ -36,10 +36,36 @@
                     </a>
                 </div>
                 <div class="col-6 d-md-none text-center">
-                    <button type="button" class="brief-howto btn" data-bs-toggle="popover" title="ICAO Code"
-                        data-bs-content="An ICAO code is a four letter code designating aerodromes. For example Dublin is EIDW or New York JFK is KJFK">
+                    <button type="button" class="brief-howto btn" data-bs-toggle="modal" data-bs-target="#howToRead">
                         <p>How to read?</p>
                     </button>
+                    <div class="modal fade" id="howToRead" tabindex="-1" aria-labelledby="howToRead" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">How to read METARS and TAFS</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <h5>METAR</h5>
+                                    <p>Learn about METARS <a
+                                            href="https://www.skybrary.aero/index.php/Meteorological_Terminal_Air_Report_(METAR)"
+                                            target="_blank" class="metar-link" title="METARS">here.</a>
+                                    </p>
+                                    <h5>TAF</h5>
+                                    <p>The coded TAF
+                                        that you see below can be read about<a
+                                            href="https://aviationweather.gov/taf/decoder" target="_blank"
+                                            class="taf-link" title="TAF"> here!</a></p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-4 col-12 brief-search">
                     <form class="d-flex">
@@ -49,10 +75,37 @@
                     </form>
                 </div>
                 <div class="col-4 d-none d-md-block text-center">
-                    <button type="button" class="brief-howto btn" data-bs-toggle="popover" title="ICAO Code"
-                        data-bs-content="An ICAO code is a four letter code designating aerodromes. For example Dublin is EIDW or New York JFK is KJFK">
+                    <button type="button" class="brief-howto btn" data-bs-toggle="modal" data-bs-target="#howToReadlg">
                         <p>How to read?</p>
                     </button>
+                    <div class="modal fade" id="howToReadlg" tabindex="-1" aria-labelledby="howToReadlg"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">How to read METARS and TAFS</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <h5>METAR</h5>
+                                    <p>Learn about METARS <a
+                                            href="https://www.skybrary.aero/index.php/Meteorological_Terminal_Air_Report_(METAR)"
+                                            target="_blank" class="metar-link" title="METARS">here.</a>
+                                    </p>
+                                    <h5>TAF</h5>
+                                    <p>The coded TAF
+                                        that you see below can be read about<a
+                                            href="https://aviationweather.gov/taf/decoder" target="_blank"
+                                            class="taf-link" title="TAF"> here!</a></p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <!-------------------------BRIEFING ELEMENTS-------------------------->
