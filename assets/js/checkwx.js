@@ -30,6 +30,7 @@ $(function () {
                 $('#icao_code').html(metar.icao);
                 $('#name').text(metar.station.name);
                 $('#metar_raw').text(metar.raw_text);
+                $('#metar_email').text(metar.raw_text);
 
                 if (metar.visibility) {
                     $('#visibility_meters').text(metar.visibility.meters_float);
@@ -130,6 +131,7 @@ $(function () {
                 $('#taf_bulletin').html('Bulletin issued on ' + date.toUTCString());
                 $('#taf_raw').text(taf.raw_text);
                 $('#taf_print').text(taf.raw_text);
+                $('#taf_email').text(taf.raw_text);
                 $('#taf_info').html('Report issued for ' + taf.icao + ' at ' + taf.station.name);
                 $('#taf_timestamp').html('Forecast active from ' + from.toUTCString() + ' to ' + end.toUTCString());
 
