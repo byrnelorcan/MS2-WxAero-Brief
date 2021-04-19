@@ -162,6 +162,11 @@
     width: 100%;
 }
 
+.print-design {
+    font-family: 'Lato';
+    font-weight: 300;
+}
+
 
 /*------------------ FLIGHT CATEGORY ------------------*/
 .vfr_label {

@@ -129,6 +129,7 @@ $(function () {
                 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
                 $('#taf_bulletin').html('Bulletin issued on ' + date.toUTCString());
                 $('#taf_raw').text(taf.raw_text);
+                $('#taf_print').text(taf.raw_text);
                 $('#taf_info').html('Report issued for ' + taf.icao + ' at ' + taf.station.name);
                 $('#taf_timestamp').html('Forecast active from ' + from.toUTCString() + ' to ' + end.toUTCString());
 
