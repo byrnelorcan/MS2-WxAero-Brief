@@ -20,42 +20,87 @@
             <div class="row">
                 <div class="col-12 landing-paragraph">
                     <h1>Wx AeroBrief</h1>
-                    <p>A quick brief app for everyday pilots</p>
-                    <p>Simply click below and get your weather and airport brief</p>
+                    <div class="landing-text">
+                        <p>A quick brief app for everyday pilots. <br>
+                            Use your airport ICAO Identifer to search for the weather at
+                            your
+                            airfield. <button type="button" class="btn btn-secondary landing-icon"
+                                data-bs-toggle="popover" title="ICAO Code"
+                                data-bs-content="An ICAO code is a four letter code designating aerodromes. For example Dublin is EIDW, New York JFK is KJFK and London Heathrow is EGLL">
+
+                                <i class="far fa-question-circle fa-lg"></i></button>
+                            <br>
+                            Simply click below to get started!</p>
+                    </div>
                     <form>
                         <div class="form-group">
                             <!--<input class="form-control me-2 landing-search" type="search"
-                                placeholder="Enter Airport ICAO Code" aria-label="search">
+                                placeholder="Enter Airport ICAO Code" aria-label="search" id="icao" name="icao">
                             <button type="button" class="btn btn-secondary landing-icon" data-bs-toggle="popover"
                                 title="ICAO Code"
                                 data-bs-content="An ICAO code is a four letter code designating aerodromes. For example Dublin is EIDW or New York JFK is KJFK"><i
-                                    class="far fa-question-circle fa-lg"></i></button>-->
-                        </div>
-                        <div class="form-group">
-                            <a href="brief.html" target="_blank"><button type="button"
-                                    class="btn btn-block landing-button">Get Briefed</button></a>
-                        </div>
+                                    class="far fa-question-circle fa-lg"></i></button>
+                        </div>-->
+                            <div class="form-group">
+                                <a href="test.html"><button type="button" class="btn btn-block landing-button">Go to
+                                        brief
+                                        page!</button></a>
+                            </div>
                     </form>
 
                 </div>
             </div>
         </div>
     </section>
-
-    <!--Brief Page-->
-
-    <!--Email/Contact-->
-    <section>
-
-    </section>
 </body>
-
+<script src="https://kit.fontawesome.com/4867e68bbe.js" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/4867e68bbe.js" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
+</script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"
     integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous">
 </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"
     integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous">
 </script>
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDAEssOU7Da63DY0v6cZAx4Rq7G67v3Vr4"
+    type="text/javascript"></script>
+<script src="assets/js/checkwx.js"></script>
+<script src="assets/js/email.js"></script>
+<script>
+    //https://stackoverflow.com/questions/2231936/how-can-i-pre-fill-the-value-of-a-textarea-in-an-html-form
+    function addMetar() {
+
+        var x = document.getElementById("emaildata").value;
+
+        document.getElementById("emaildata").value = x + document.getElementById('metar_email').innerHTML;
+    }
+
+    function addTaf() {
+
+        var x = document.getElementById("emaildata").value;
+
+        document.getElementById("emaildata").value = x + document.getElementById('taf_email').innerHTML;
+    }
+</script>
+<script>
+    // https://gist.github.com/andrewlimaza/490a69417d9fe2df3f668195a7661605
+    function printDiv(divName) {
+        var printContents = document.getElementById(divName).innerHTML;
+        var originalContents = document.body.innerHTML;
+
+        document.body.innerHTML = printContents;
+
+        window.print();
+
+        document.body.innerHTML = originalContents;
+
+    }
+</script>
+
+<!--<script src="assets/js/map.js"></script>-->
 <!--POPOVER FONT MOVE TO JS folder!!-->
 <script>
     var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
