@@ -138,29 +138,27 @@ The briefing page is split into a five sections. The top-line search bar and pop
 - The TAF container shows a coded format of the forecast with the relevant timestamps.
 - The location area features a Google Maps satellite image of the aerodrome along with details of the aerodrome.
 - The email button links to a modal that enables the user to receive the brief by email. The print button opens the print function of the browser and allows the user print the raw data brief. 
-3. **Information Architecture**
 
-![Image]()
 
 ## Skeleton 
 ----------------
 ### **Wireframes** ###
 
 The Skeleton of the project design was built utilising [Figma](https://www.figma.com/design-systems/). 
-A detailed design breakdown can be seen [here.]()
+
 The overall basic design breakpoints can be seen below:
 
-![Image]()
+![Image](assets/images/README_images/wireframe.png)
 
 The individual wireframes can be seen by following the links below:
-- [xs]()
-- [sm]()
-- [md]()
-- [lg]()
-- [xl]()
+- [xs](assets/images/README_images/xs.pdf)
+- [md](assets/images/README_images/md.pdf)
+- [xl](assets/images/README_images/xl.pdf)
 
 ### **Changes to initial wireframes** ###
-A number of design edits were made throughout the project with the purpose of increased userability. 
+A number of design edits were made throughout the project with the purpose of increased userability and clarity. These include:
+- The labels for the flight conditions was made to a solid block colour to be immediately recognised by the user.
+- 'How to read' was changed to 'How to use', this is broader and helps a user who is unfamilar with terminology.
  
 
 ## Surface 
