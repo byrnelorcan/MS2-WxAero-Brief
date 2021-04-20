@@ -16,7 +16,7 @@
 .landing-paragraph {
     margin: 5px;
     padding: 10px;
-    color: white;
+    color: #f6f7f4;
     position: relative;
     left: 20%;
     top: 18%
@@ -25,7 +25,7 @@
 .landing-button {
     width: 80%;
     background-color: #ffffff36;
-    color: #fff;
+    color: #f6f7f4;
     margin-top: 2rem;
     height: 45px;
     font-family: 'Lato';
@@ -118,10 +118,10 @@
 
 .brief-header {
 
-    /*border: 1.5px solid #adb5bd;*/
+
     border-radius: 5px;
     padding: 0.8rem;
-    /*width: 95%;*/
+
 
     margin: 20px;
 
@@ -137,9 +137,7 @@
 }
 
 .brief-container {
-    /*margin: 20px;
-    width: 30%;*/
-    /*border: 1.5px solid #adb5bd;*/
+
     border-radius: 5px;
 }
 
@@ -234,7 +232,7 @@
 }
 
 .unk_label {
-    background-color: rgb(0, 0, 2);
+    background-color: #010b14;
     font-weight: 500;
     width: 75%;
     font-size: large;
