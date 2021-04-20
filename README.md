@@ -14,8 +14,7 @@ Overall, the websites purpose is present the critical information needed for a w
 
 
 # Table of Contents:
-
-- [**UX**](#ux)
+- [**UX**](#--ux--)
   * [User Stories](#user-stories)
   * [Strategy](#strategy)
   * [Scope](#scope)
@@ -24,29 +23,27 @@ Overall, the websites purpose is present the critical information needed for a w
     + [**Wireframes**](#--wireframes--)
     + [**Changes to initial wireframes**](#--changes-to-initial-wireframes--)
   * [Surface](#surface)
-- [**Features**](#features)
-  * [1. Navigation](#1-navigation)
-  * [2. Landing Page](#2-landing-page)
-  * [3. Our Services](#3-our-services)
-  * [4. Our Renewable Technology](#4-our-renewable-technology)
-  * [5. About us / Meet the team](#5-about-us---meet-the-team)
-  * [6. Get in touch](#6-get-in-touch)
-  * [7. Future Features](#7-future-features)
-- [**Technologies**](#technologies-used)
+- [**Features**](#--features--)
+  * [1. Landing Page](#1-landing-page)
+  * [2. Briefing Page](#2-briefing-page)
+  * [3. Future Features](#3-future-features)
+- [**Technologies**](#--technologies--)
   * [Languages](#languages)
   * [Libraries, Frameworks and Technologies](#libraries--frameworks-and-technologies)
   * [Workspace and Version Control](#workspace-and-version-control)
-- [**Testing**](#testing)
+- [**Testing**](#--testing--)
   * [Code Validators](#code-validators)
+  * [Javascript](#javascript)
   * [Responsive Elements](#responsive-elements)
+  * [Data Accuracy](#data-accuracy)
   * [UX User Story Test](#ux-user-story-test)
-  * [Manual Testing](#manual-testing)
   * [Bugs and Fixes](#bugs-and-fixes)
-- [**Deployment**](#deployment)
+- [Deployment](#deployment)
   * [Github Pages Deployment:](#github-pages-deployment-)
   * [Forking The Repository:](#forking-the-repository-)
   * [Creating a local clone:](#creating-a-local-clone-)
-- [**Credits**](#credits)
+  * [Using the sites API functions:](#using-the-sites-api-functions-)
+- [**Credits**](#--credits--)
   * [Content](#content)
   * [Media](#media)
   * [Acknowledgements](#acknowledgements)
@@ -437,7 +434,10 @@ For more specific information relating to the clone follow this [link](https://d
 
 ## Media 
 --------------
+The images via [Unsplash](https://unsplash.com/) used on the site are credited below:
+   - Photo of landing page [Plane](https://unsplash.com/photos/v38KKZvmT_g) by [Karen Cann](https://unsplash.com/@karenjac)
 
+All icons were sourced from [font awesome](https://fontawesome.com/)
 
 ## Acknowledgements
 --------------
