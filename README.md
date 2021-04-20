@@ -2,7 +2,7 @@
 
 ## **[View the Live Website Here!]()** ##
 
-![Image]()
+![Image](assets/images/README_images/mockup.png)
 
 ## **Code Institute Milestone 2 Project - Interactive Frontend Development**
 
@@ -313,9 +313,28 @@ Other tools utilised to test responsivity are seen here:
 The user stories previously laid out in the UX Design section are tested, to ensure that project achieves the user goals.
 
 __Applicable to all users__
+- As a user, I would like to understand the purpose of the website on landing on the page.
+- As a user, I would like to get the information I require quickly and effectively.
+- As a user, I require the information in standard industry format. ie in METAR and TAF.
+- As a user, I need to be able to search for my relevant airfield.
+- As a user, I would like to see additional data such as the location, to gain a greater situational awareness.
+- As a user, the ability to email or print my brief is important.
 
+__Professional Pilots__
+- As a professional pilot, the ability to see the weather forecast is vital to safe operation of my flight.
+- As a professional pilot, additional information about my airfield is important.
+- As a professional pilot, I require information for a specific reporting point and not necessarily for a large region.
+
+__Training and Students__
+- As a student, I would like the ability to learn more about weather reports and standard industry practice.
+- As a student, I am not as proficient in flying and require a set of rules to go flying. Knowing that condtions are safe for me to fly is vital.
+- As a student, simple and disgestable content would be effective in my learning application.
+
+__General user__
+- As a general user, I do not need overwhelming amounts of content or and do not want to research how to read the weather.
 
 __Returning Users__
+- As a returning user, I would like to be able to quickly navigate to the briefing page.
 
 
 ## Manual Testing
