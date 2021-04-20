@@ -435,7 +435,7 @@ For more specific information relating to the clone follow this [link](https://d
 ## Media 
 --------------
 The images via [Unsplash](https://unsplash.com/) used on the site are credited below:
-   - Photo of landing page [Plane](https://unsplash.com/photos/v38KKZvmT_g) by [Karen Cann](https://unsplash.com/@karenjac)
+   - Photo of landing page plane by [Karen Cann](https://unsplash.com/@karenjac)
 
 All icons were sourced from [font awesome](https://fontawesome.com/)
 
