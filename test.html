@@ -290,15 +290,15 @@
                             <div class="modal-body">
                                 <form onsubmit="return sendMail(this);">
                                     <div class="mb-3">
-                                        <label for="emailaddress" class="form-label">Email address</label>
+                                        <label for="to_email" class="form-label">Email address</label>
                                         <input type="email" class="form-control" id="to_email" name="emailaddress"
                                             aria-describedby="emailHelp" required>
                                         <div id="emailHelp" class="form-text">We'll never share your email with
                                             anyone else.</div>
                                     </div>
                                     <div class="mb-3">
-                                        <label for="name" class="form-label">Name</label>
-                                        <input type="name" class="form-control" id="from_name" name="name" required>
+                                        <label for="from_name" class="form-label">Name</label>
+                                        <input type="text" class="form-control" id="from_name" name="name" required>
                                     </div>
                                     <div class="mb-3">
                                         <div class="d-none" id="metar_email"></div>
@@ -310,7 +310,7 @@
                                         <input type="button" class="btn btn-info mt-2" value="Get TAF"
                                             onclick="addTaf()" />
                                     </div>
-                                    <input type="submit" class="btn btn-primary btn-email"></input>
+                                    <input type="submit" class="btn btn-primary btn-email">
                                 </form>
                             </div>
                         </div>
