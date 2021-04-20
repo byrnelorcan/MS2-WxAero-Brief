@@ -1,5 +1,5 @@
 $(function () {
-    /* The content below was sourced at the CheckWX API documentation and the examples page is linked in the readme file. */
+    // The content below was sourced at the CheckWX API documentation and the examples page is linked in the readme file. //
     var urlParams = new URLSearchParams(window.location.search);
 
     var icao = 'EIDW';
