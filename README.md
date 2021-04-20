@@ -282,29 +282,40 @@ For this project two languages were used:
 ---------------
 A number of code validation techniques were utilised to ensure proper testing of site. 
 For HTML and CSS, I used the [W3C Markup Validator](https://validator.w3.org) and [W3C CSS Validation Services](https://jigsaw.w3.org/css-validator/). 
-These tests returned no errors. See below for results.
+See below for results.
 
-- [HTML Test]()
-- [CSS Test]()
+- [HTML Test](https://validator.w3.org/nu/?doc=https%3A%2F%2Fbyrnelorcan.github.io%2FMS2-WxAero-Brief%2Ftest.html) - A warning regarding an empty h3 element was not of concerne as the element is filled when the user searches.
+- [CSS Test](assets/images/README_images/css.png) - No errors return from CSS test.
 
 A Chrome Developer Tools "Lighthouse" Test was aslo completed to test for accessibility and performance. 
-The results are seen below. Initial testing showed a low value of SEO and accessibility. This was rectified by 
-adding missing alt labels and adding a meta description. Although, the accessibility number is still below 90,
-this is an area I wish to improve on going forward with the design of the site. 
+The results are seen below. The site scored well in all aspects of performance and userability. 
 
-![Image]()
+![Image](assets/images/README_images/lighthouse.png)
+
+## Javascript
+--------------
+A combination of [JSHint](https://jshint.com/) and manual testing was completed on the javascript to ensure adequate quality. 
+- No errors returned for JSHint.
+- On manual testing an error on the initMap() function was found. The fix for this can be found below.
+- Manual testing completed to show that all funtionality of the page was correct. The email, print, map and search all passed the test and are operating as expected.
+- An API limit was reached during testing and the page correctly displays 'Too many requests" when this occurs.  
 
 ## Responsive Elements 
 --------------
 
 The responsivity of the page was tested primarily using [Google Chrome Dev Tools]() and manual resizing of windows. The test provided positive results for each 
 device option. The responsive breakpoints and resizing worked throughout the site. The site was shared with colleagues and friends and tested 
-on their devices. An error on IOS with images was found through these tests. A fix for that problem is referred to in the relevant section below.
+on their devices. The site worked well on all devices tested and there was no problem with browser compatibility found during these tests.
 
 Other tools utilised to test responsivity are seen here:
-- [Screenfly](https://bluetree.ai/screenfly/) - [Result]()
-- [Responsinator](http://www.responsinator.com) - [Result]()
+- [Screenfly](https://bluetree.ai/screenfly/) - [Result](https://bluetree.ai/screenfly/?u=https%3A//byrnelorcan.github.io/MS2-WxAero-Brief/test.html&a=20&b=10)
+- [Responsinator](http://www.responsinator.com) - [Result](http://www.responsinator.com/?url=https%3A%2F%2Fbyrnelorcan.github.io%2FMS2-WxAero-Brief%2Ftest.html)
   
+## Data Accuracy
+--------------
+Manual testing was completed to test that the site was delivering correct METAR and TAF information ofr aerodromes globally. The results returned very positive results. The site accurately displays the relevant information. The flight conditions label changes colour depending on the condtions at the aerodrome. 
+
+These tests were completed by comparing data from reputable trusted [sources](https://www.aviationweather.gov/metar) and the data displayed via the [Check WX API](https://www.checkwxapi.com/).
 
 ## UX User Story Test
 --------------

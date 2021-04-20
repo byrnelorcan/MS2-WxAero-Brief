@@ -163,8 +163,8 @@ $(function () {
             if (response.results > 0) {
                 var station = response.data[0];
                 $('#results_block').removeClass('d-none');
-                $('#sunrise').text(station.sunrise_sunset.utc.sun_rise)
-                $('#sunset').text(station.sunrise_sunset.utc.sun_set)
+                $('#sunrise').text(station.sunrise_sunset.utc.sun_rise);
+                $('#sunset').text(station.sunrise_sunset.utc.sun_set);
             }
         }
 
@@ -253,7 +253,7 @@ $(function () {
             }
         },
     });
-})
+});
 
 //https://stackoverflow.com/questions/2231936/how-can-i-pre-fill-the-value-of-a-textarea-in-an-html-form
 function addMetar() {
@@ -285,5 +285,5 @@ function printDiv(divName) {
 
 var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
 var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
-    return new bootstrap.Popover(popoverTriggerEl)
-})
+    return new bootstrap.Popover(popoverTriggerEl);
+});
