@@ -127,13 +127,17 @@ Based on the strategy of the project, a number key requirements were laid out. T
 ## Structure
 ----------------
 
-The structure of the page is formed around a single page scrolling design, with fixed sticky navbar that collapses to burger menu on 
-tablet and desktop. The website is split into five separate sections, that are simple to navigate and clear to understand.
+The structure of the page is formed around a landing page that links directly to briefing dashboard.
+The briefing page is split into a five sections. The top-line search bar and pop-down, the airport information section, the METAR, TAF and location section and finally the email and print buttons. The site is responsive and is fully functional. 
 
 1. **Landing Page**
-- 
-2. **Brief Page**
-- 
+- Simple landing page, with solid block colour hero-image featuring an aircraft. The content features a simple plain white text and description of the site and what required parameter is needed. The landing page features a button that links directly to the briefing dashboard. 
+2. **Briefing Page**
+- This section is the key dashboard that enables the user to search for their weather briefing. It is split into key containers. The airport information section displays the users search result along with the formal name of the aerodrome, the local time, zulu time and the sunset and sunrise hours.
+- The METAR container displays decoded weather information up to the latest report along with an interactive feature that changes colour depending of the weather restrictons at the aerodrome.
+- The TAF container shows a coded format of the forecast with the relevant timestamps.
+- The location area features a Google Maps satellite image of the aerodrome along with details of the aerodrome.
+- The email button links to a modal that enables the user to receive the brief by email. The print button opens the print function of the browser and allows the user print the raw data brief. 
 3. **Information Architecture**
 
 ![Image]()
@@ -161,56 +165,79 @@ A number of design edits were made throughout the project with the purpose of in
 
 ## Surface 
 ----------------
-Text
-Text
-
-Text
-Text
+The site aimed to be bright, clear and simple. The colour choice was to be light so that nothing distracts from the key data and information. The colour blue is associated with the sky and therefore a theme of blue and white was pursued. A white background enabled the vital data to be displayed immediately, along with a clear contrast for different flight conditions.
 
 **Colour Theme**
 
-![Image]()
+![Image](assets/images/README_images/AeroBrief.png)
 
 **Typography**
 
 - The font used for both body and headings is [Lato
-Designed by Łukasz Dziedzic](https://fonts.google.com/specimen/Lato). This font was chosen for its clarity and modern feel.
-The font is utilsed significantly in web design and I wanted the user to feel that the site was of high standard and relatively familiar.
+Designed by Łukasz Dziedzic](https://fonts.google.com/specimen/Lato). This font was chosen for its professionalism and clarity.
+I wanted to bring a modern design feel to the site and utilising a font that is widely used was effective.
 The site also has 'Sans Serif' as an alternative font.
 
 # **Features**
 ----------------
+## 1. Landing Page
+-----------------
+The landing page features high-quality large solid block image with an aircraft flying overhead. The user aware that the site is relevant for aviation users. The title of the site is large, bold and contrasts well with sky colours in the background.
 
-## 1. Navigation
-Text
+The text underneath the title lays out what the purpose of the site is. It also explains to the user that they require the ICAO identifier for their aerodrome. The user also has the oppurtunity to engage with a pop-over that explains what the ICAO code is and also gives some examples for users that are not familiar with aviation terminology.
 
-Text
+The user is then presented with a large button that links to the briefing page.
 
-Text
+![Image](assets/images/README_images/landingpage.png)
 
-----------------
-## 2. Landing Page
+----------------------
+## 2. Briefing Page
+----------------------
+The Briefing page opens on the default EIDW or Dublin Airport. The user is prompted to enter their ICAO code in the search bar. The return result shows the airport name and the relevant times. The title links back to the landing page for userability.
 
-Text
+![Image](assets/images/README_images/airport.png)
 
-Text
+The 'How to use" opens a modal that enables the user to learn more about the relevant terminology. The modal also reiterates what an ICAO code is and shows some examples for unfamiliar users. The site links to relevant pages for further reading. 
 
-![Image]()
+![Image](assets/images/README_images/howto.png)
 
-----------------
-## 3. Search page
+__METAR Section__
 
-Text
+The key element of the brief dashboard is the decoded METAR briefing. It displays vital weather information relevant for the user in a clear and concise way. The section features a interactive label that changes colour relevant to the weather conditions at the aerodrome. The data is broken down into manageable sections, featuring a cloud and condition list. 
 
-Text
+The data labels are chosen in levels of importance as per industry standards. The data also features standard format. For example, visiblility 9999 illustrates that the visibility is greater than 10km. 
+
+![Image](assets/images/README_images/metar.png)
+
+__TAF Section__
+
+The TAF section features key forecast data in coded format. The reason for coded format is answered in the user stories section below. The section features a label which can show active or inactive. If the TAF is inactive, the label shows red text and alerts the user that the data may be out of date or innaccurate. That is a key functionality for the user to be able to quickly understand whether the information should be trusted or not. 
+
+The TAF section displays the time and date the forecast was issued and also shows the period of time that the TAF is active for.
+
+![Image](assets/images/README_images/taf.png)
+
+__Location Section__
+
+The location section displays an interactive google map with satellite imagery of the aerodrome, along with the coordinates, the airport type and elevation above mean sea level. This is additional information and not one of the two key datasets, however it adds to the user experience and is a bonus element for understanding and briefing. 
+
+![Image](assets/images/README_images/location.png)
+
+__Email and Print Section__
+
+The email modal displayed below allows the user to select a METAR or TAF to email directly to themsleves. This key functionality enables the user a seemless way of getting the key information required in different formats. The print function opens the browsers printing application and enables the user to print off the raw format METAR and TAF. 
+
+![Image](assets/images/README_images/email.png)
 
 
-![Image](assets/images/README_images/features/techcard.png)
+## 3. Future Features
+Future features that could be implemented include:
+- A nearby aerodrome locator.
+- Specific airport brief detailing runway details and air traffic control frequencies.
+- An overlayed map showing route options.
+- A point to point briefing, showing weather along the route.
 
-
-
-## 7. Future Features
-
+I believe that given my limited knowledge of languages used and the given scope of the project, it was justified to not pursue implementing the aforementioned features.
 
 
 # **Technologies**
@@ -219,14 +246,16 @@ Text
 For this project two languages were used:
 - [HTML](https://www.w3schools.com/html/#:~:text=HTML%20is%20the%20standard%20markup,learn%20%2D%20You%20will%20enjoy%20it!)
 - [CSS](https://www.w3schools.com/css/)
+- [Javascript](https://www.javascript.com/)
 
 ## Libraries, Frameworks and Technologies
 ---------------
+
+- [Check WX API](https://www.checkwxapi.com/) - Used to source all weather and aerodrome data.
+
 - [Bootstrap](https://getbootstrap.com/) - Bootstrap was used to for its wasy to use grid and repsonsive layout. Elelments of the navbar, cards and forms were taken from the Bootstrap V5.0 CDN.
 
 - [Figma](https://www.figma.com/) - Figma was used to create initial design and wireframes for different breakpoints.
-
-- [Logomakr](https://logomakr.com) - The fictional brand logo was created on 'LogoMakr'.
 
 - [Coolors](https://coolors.co) - Used to create colour palette and test colour themes.
 
@@ -238,9 +267,9 @@ For this project two languages were used:
 
 - [JQuery](https://jquery.com/) - Used for aspects of userability.
 
-- [Leaflet](https://leafletjs.com/examples/quick-start/) - Leaflet was used for the map in the contact section. Due to my lacking experience with JavaScript, this had to be imported and edited to suit the loction of this project.
+- [Google Maps API](https://developers.google.com/maps) - Used to build google maps view.
 
-- [Maptiler Cloud](https://cloud.maptiler.com/maps/streets/) - Leaflet uses maptiler cloud to tile the map view.
+- [EmailJS](https://www.emailjs.com/) - Used for email functionality.
 
 - [Mock-Up Generator](https://techsini.com/multi-mockup/index.php) - Used for title photo.
 
