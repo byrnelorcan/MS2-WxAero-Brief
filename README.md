@@ -67,7 +67,6 @@ __Applicable to all users__
 
 __Professional Pilots__
 - As a professional pilot, the ability to see the weather forecast is vital to safe operation of my flight.
-- As a professional pilot, additional information about my airfield is important.
 - As a professional pilot, I require information for a specific reporting point and not necessarily for a large region.
 
 __Training and Students__
@@ -313,7 +312,12 @@ Other tools utilised to test responsivity are seen here:
   
 ## Data Accuracy
 --------------
-Manual testing was completed to test that the site was delivering correct METAR and TAF information ofr aerodromes globally. The results returned very positive results. The site accurately displays the relevant information. The flight conditions label changes colour depending on the condtions at the aerodrome. 
+Manual testing was completed to test that the site was delivering correct METAR and TAF information ofr aerodromes globally. The results returned very positive results. The site accurately displays the relevant information. The flight conditions label changes colour depending on the condtions at the aerodrome:
+- VFR - Green
+- IFR - Red
+- MVFR - Navy
+- LIFR - Salmon
+- Unknown - Black
 
 These tests were completed by comparing data from reputable trusted [sources](https://www.aviationweather.gov/metar) and the data displayed via the [Check WX API](https://www.checkwxapi.com/).
 
@@ -322,59 +326,115 @@ These tests were completed by comparing data from reputable trusted [sources](ht
 The user stories previously laid out in the UX Design section are tested, to ensure that project achieves the user goals.
 
 __Applicable to all users__
-- As a user, I would like to understand the purpose of the website on landing on the page.
-- As a user, I would like to get the information I require quickly and effectively.
-- As a user, I require the information in standard industry format. ie in METAR and TAF.
-- As a user, I need to be able to search for my relevant airfield.
-- As a user, I would like to see additional data such as the location, to gain a greater situational awareness.
-- As a user, the ability to email or print my brief is important.
+- *As a user, I would like to understand the purpose of the website on landing on the page.*
+  - The user lands on the page with a clear definition of what the page is and how to navigate to search. 
+- *As a user, I would like to get the information I require quickly and effectively.*
+  - The user can search for their desired aerodrome brief as required, the information is formatted and displayed clearly.
+- *As a user, I require the information in standard industry format. ie in METAR and TAF.*
+  - The METAR and TAF are displayed in line with standard operating format and is clearly understandable to aviation professionals.
+- *As a user, I need to be able to search for my relevant airfield.*
+  - The user can search for their desired report.
+- *As a user, I would like to see additional data such as the location, to gain a greater situational awareness.*
+  - The user gains additional information through interactive map, the coordinates and the airport elevation.
+- *As a user, the ability to email or print my brief is important.*
+  - The user has the option to email or print the data as required.
 
 __Professional Pilots__
-- As a professional pilot, the ability to see the weather forecast is vital to safe operation of my flight.
-- As a professional pilot, additional information about my airfield is important.
-- As a professional pilot, I require information for a specific reporting point and not necessarily for a large region.
+- *As a professional pilot, the ability to see the weather forecast is vital to safe operation of my flight.*
+  - The TAF forecast is displayed in raw format and is cleary defined as to whether the information is active. The information has been tested and is accurate. 
+- *As a professional pilot, I require information for a specific reporting point and not necessarily for a large region.*
+  - The user types the specific ICAO code and therefore does not get bogged down in unnecessary and unwanted information. The user only gets the vital information they require.
 
 __Training and Students__
-- As a student, I would like the ability to learn more about weather reports and standard industry practice.
-- As a student, I am not as proficient in flying and require a set of rules to go flying. Knowing that condtions are safe for me to fly is vital.
-- As a student, simple and disgestable content would be effective in my learning application.
+- *As a student, I would like the ability to learn more about weather reports and standard industry practice.*
+  - The user can learn more my clicking the 'How to use?' button. There is an oppurtunity for further reading on linked sites. 
+- *As a student, I am not as proficient in flying and require a set of rules to go flying. Knowing that condtions are safe for me to fly is vital.*
+  - Immediately the user knows if condtions are VFR (Green) or IFR (Red), and therefore knows that the weather may be acceptable for them to proceed with a flight.
+- *As a student, simple and disgestable content would be effective in my learning application.*
+  - The information displayed is broken down, spaced-out and formatted to be easiliy disgestable to the user. 
 
 __General user__
-- As a general user, I do not need overwhelming amounts of content or and do not want to research how to read the weather.
+- *As a general user, I do not need overwhelming amounts of content or and do not want to research how to read the weather.*
+  - The METAR content is decoded so a user can understand without any prior knowledge.
 
 __Returning Users__
-- As a returning user, I would like to be able to quickly navigate to the briefing page.
+- *As a returning user, I would like to be able to quickly navigate to the briefing page.*
+  - As a user I can go directly to the briefing dashboard on landing upon the site.
 
-
-## Manual Testing
---------------
-**Browser testing** 
-
-
-**Functionality testing**
 
 
 ## Bugs and Fixes 
 --------------
+- Error in initMap() function getting the coordinates from the data coming form source. 
+  - Fixed by putting the initMap() inside the API call.
+  - ```Javascript success: 
+          function initMap(response) {
+            if (response.results > 0) {
+                var lat = response.data[0].location.coordinates[1];
+                var long = response.data[0].location.coordinates[0];
+                map = new google.maps.Map(document.getElementById("map"), {
+                    zoom: 13,
+                    center: new google.maps.LatLng(lat, long),
+                    mapTypeId: "hybrid",
+                });
 
+- Error in initMap() function when no data is available from API.
+  - Simple fix using; 
+  - ```Javascript 
+      else var lat = [0];
+            var long = [0];
 
 # Deployment 
 
 ## Github Pages Deployment:
-
+The project is deployed to GitHub Pages. To deploy the site follow the instruction below.
+1. In GitHub navigate to the [MS2 WxAeroBrief Repository](https://github.com/byrnelorcan/MS2-WxAero-Brief).
+2. Locate '_Settings_', navigate to '_Source_' and select _Master Branch_ from the dropdown and click _Save_.
+3. The site will be published and confirmation shown on the page.
 
 ## Forking The Repository:
-
+To create a fork of the Repository simply:
+1. Navigate to the [MS2 WxAeroBrief Repository](https://github.com/byrnelorcan/MS2-WxAero-Brief).
+2. Select '_Fork_' on the right hand corner of the page.
 
 ## Creating a local clone:
+1. In GitHub navigate to the [MS2 WxAeroBrief Repository](https://github.com/byrnelorcan/MS2-WxAero-Brief).
+2. Above the file list select '_Code_' with the download icon. 
+3. To clone select the copy icon at the far right side of URL.
+4. Open your terminal in respective IDE, and edit working directory to the desired location.
+5. Type `git clone` and paste copied URL.
+6. Select Enter and local clone will be created. 
 
+For more specific information relating to the clone follow this [link](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
 
+## Using the sites API functions:
+- [Check WX API](https://www.checkwxapi.com/) 
+  - Navigate to the site and sign up for free. 
+  - Locate user API key.
+  - Input your API for all calls to the CheckWx API.
+
+- [EmailJS](https://www.emailjs.com/) 
+  - Navigate to the site and sign up for free. 
+  - Locate user API key.
+  - Input your API for all calls to the EmailJS API.
+
+- [Google Maps API](https://developers.google.com/maps) 
+  - Navigate to the site and sign up using credit card. 
+  - Locate user API key.
+  - Input your API for all calls to the Google Maps API.
 
 
 # **Credits**
 ## Content
 --------------
- 
+ - The structure of the site came from [Bootstrap Documentation V5.0.](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
+ - The [Check WX API](https://www.checkwxapi.com/) site [documentation](https://www.checkwxapi.com/) was used extensively alongside the sites examples and a github page found [here](https://www.checkwxapi.com/).
+ - The [EmailJS](https://www.emailjs.com/) documentation was used in combination with the Code Institute 'Rosie' project. 
+ - [Google Maps API](https://developers.google.com/maps) documentation was utilised in combination with help from my mentor for the map build.
+ - The prefill form for the email to send was found [here.](https://stackoverflow.com/questions/2231936/how-can-i-pre-fill-the-value-of-a-textarea-in-an-html-form)
+ - The print functionality was found [here.](https://gist.github.com/andrewlimaza/490a69417d9fe2df3f668195a7661605)
+
+
 ## Media 
 --------------
 
