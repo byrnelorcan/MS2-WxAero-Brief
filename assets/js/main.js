@@ -1,5 +1,5 @@
 $(function () {
-
+    /* The content below was sourced at the CheckWX API documentation and the examples page is linked in the readme file. */
     var urlParams = new URLSearchParams(window.location.search);
 
     var icao = 'EIDW';
@@ -255,7 +255,7 @@ $(function () {
     });
 });
 
-//https://stackoverflow.com/questions/2231936/how-can-i-pre-fill-the-value-of-a-textarea-in-an-html-form
+// Source for the content below: https://stackoverflow.com/questions/2231936/how-can-i-pre-fill-the-value-of-a-textarea-in-an-html-form
 function addMetar() {
 
     var x = document.getElementById("emaildata").value;
@@ -270,7 +270,7 @@ function addTaf() {
     document.getElementById("emaildata").value = x + document.getElementById('taf_email').innerHTML;
 }
 
-// https://gist.github.com/andrewlimaza/490a69417d9fe2df3f668195a7661605
+// Source for the content below: https://gist.github.com/andrewlimaza/490a69417d9fe2df3f668195a7661605
 function printDiv(divName) {
     var printContents = document.getElementById(divName).innerHTML;
     var originalContents = document.body.innerHTML;

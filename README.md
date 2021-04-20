@@ -1,8 +1,8 @@
 # **Wx AeroBrief**
 
-## **[View the Live Website Here!]()** ##
+## **[View the Live Website Here!](https://byrnelorcan.github.io/MS2-WxAero-Brief/)** ##
 
-![Image](assets/images/README_images/mockup.png)
+![Image](assets/images/README_images/mockup1.png)
 
 ## **Code Institute Milestone 2 Project - Interactive Frontend Development**
 
