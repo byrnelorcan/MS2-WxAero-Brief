@@ -88,11 +88,14 @@ $(function () {
                     }
                 }
 
-                if (metar.conditions[0]) {
+                if (metar.conditions) {
                     $('#cond_block').removeClass('d-none');
                     metar.conditions.forEach(condition => {
                         $('#cond_list').append('<li>' + condition.text + '</li>');
                     });
+                } else {
+                    $('#cond_block').removeClass('d-none');
+                    $('#cond_list').append('<li>' + ' No significant conditions ' + '</li>');
                 }
 
 
