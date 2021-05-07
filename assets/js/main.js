@@ -188,8 +188,8 @@ $(function () {
         /*----------------------------- MAP DATA -----------------------------------*/
         success: function initMap(response) {
             if (response.results > 0) {
-                var lat = response.data[0].location.coordinates[1];
-                var long = response.data[0].location.coordinates[0];
+                var lat = response.data[0].geometry.coordinates[1];
+                var long = response.data[0].geometry.coordinates[0];
                 map = new google.maps.Map(document.getElementById("map"), {
                     zoom: 13,
                     center: new google.maps.LatLng(lat, long),
@@ -223,7 +223,7 @@ $(function () {
                 $('#results_block').removeClass('d-none');
                 $('#local_time').text(time.timestamp.local.time);
                 $('#utc_time').text(time.timestamp.utc.time);
-                $('#loc').html(time.location.coordinates[0] + ',' + time.location.coordinates[1]);
+                $('#loc').html(time.geometry.coordinates[0] + ',' + time.geometry.coordinates[1]);
             }
         },
     });
